@@ -1,4 +1,4 @@
-# Nodemon + Go + Docker
+# Go + Nodemon + Docker
 
 **Background**
 

@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  go-web-service:
+    build:
+      context: .
+    container_name: go-web-app
+    restart: always
+    ports:
+      - "80:8080"
+    volumes:
+      - ./app:/app
+    command: sh -c "nodemon --exec go run main.go --signal SIGTERM"
+#    command: sh -c "go build -o /app_build/main . && /app_build/main" # "main" - app name
